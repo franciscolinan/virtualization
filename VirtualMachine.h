@@ -70,7 +70,7 @@ namespace VirtualMachine
 			mov ebx, [esi]VirtualMachineContext.esp
 			mov ebx, [ebx]
 			mov [eax], ebx
-			add[esi]VirtualMachineContext.esp, 0x4
+			add [esi]VirtualMachineContext.esp, 0x4
 			add edi, 0x4
 			mov eax, [edi]
 			imul eax, 4
