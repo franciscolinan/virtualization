@@ -25,7 +25,7 @@
 #define XCHG_EAX_EBX 3
 #define MOV_EAX_VALUE(x) 4, x 
 
-namespace VirtualMachine
+namespace virtual_machine
 {
 	extern std::uint32_t instruction_table[];
 
