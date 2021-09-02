@@ -41,7 +41,7 @@ namespace virtual_machine
 		std::uint32_t edi = 0;
 	}virtual_machine_context;
 
-	_declspec(naked, noinline) void PushRegister()
+	_declspec(naked, noinline) auto PushRegister() -> void
 	{
 		__asm
 		{
@@ -60,7 +60,7 @@ namespace virtual_machine
 		}
 	}
 
-	_declspec(naked, noinline) void PopRegister()
+	_declspec(naked, noinline) auto PopRegister() -> void
 	{
 		__asm 
 		{
@@ -80,7 +80,7 @@ namespace virtual_machine
 		}
 	}
 
-	_declspec(naked, noinline) void MovEAXValue()
+	_declspec(naked, noinline) auto MovEAXValue() -> void
 	{
 		__asm
 		{
@@ -96,7 +96,7 @@ namespace virtual_machine
 		}
 	}
 
-	_declspec(naked, noinline) void XchgEAXEBX()
+	_declspec(naked, noinline) auto XchgEAXEBX() -> void
 	{
 		__asm
 		{
@@ -119,7 +119,7 @@ namespace virtual_machine
 		}
 	}
 
-	_declspec(naked, noinline) void VMExit()
+	_declspec(naked, noinline) auto VMExit() -> void
 	{
 		__asm
 		{
@@ -135,7 +135,7 @@ namespace virtual_machine
 		}
 	}
 
-	_declspec(naked, noinline) void __cdecl VMEntry(std::uint32_t* payload)
+	_declspec(naked, noinline) auto __cdecl VMEntry(std::uint32_t* payload) -> void
 	{
 		__asm
 		{
